@@ -1,12 +1,16 @@
 language: node_js
-
 node_js:
-  - '8'
+- '8'
 cache:
   directories:
   - node_modules
-script: 
-  - npm run lint
-  - npm test
-  - npm run build
-
+script:
+- npm run lint
+- npm test
+- npm run build
+deploy:
+ skip_cleanup: true
+ provider: heroku
+ app: gard-engen-build-and-deploy
+ api_key: 
+   secure: A5LyJ0QSXTj62y/coQwRSNWhLB342m89zVIUlS9+AdhA4v06rGSVBPuHRstKZwLxPbgmJXl9xj5b4u7Xi5G+D5TFJOui3ITcgu0rq8w6Nux+3Gobs0utuaJu1yojtu3Na7zckhxVQkvHLu2ovH37IiC6e4jOF9UEHgClL1D8Idu6iYuS5IM8tMTKTLBvz3jZjF9SvvmAvEbLdpXunMNebmlfJjyB83afvc3xDrIvpa+So0Z9+KeEbIVBGYfb62H5MUkIShhQb60/pSly4BLDTNsIKSfe2qr302l+zfjNeJ84cr4It7Sn8TYLNQothq8pgOqrYsyJj7mFJAhyiwAKgRMmAglRU/Wbu3BIf/shoPu0R93sN8zIz6lk2QTbZ4TnBbb/96C5h31VsfaO8R3/8vNvz4NmS2ectb7TqbovB9P0qtS2tRCLbjMmVVJJYnDY9HL/eJSv/Qw8voDxyCZz19IsUt3Q8+l4I9wzixVxkv7ZEAXNV9wRYoqqagx9bNEWliAnc7i+KA5EJJcEeNG0Mk3l6CsBpt5aENuT4bSmW10FDJ0GxkD7LNSc1xdtWjtmj+SGZOe0iDiXuuTiy+B9AMnqPbRs3R3CDCw5XpN82UAjopBernnWSOCfuuXnlMwqTeCL+HwTYOSoqsUk0S+ZELZVy1Pw6uSRbX4BppTq3dw=
